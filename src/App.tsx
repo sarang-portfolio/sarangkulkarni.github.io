@@ -11,8 +11,9 @@ function Navigation() {
       <a href="#hero" className="nav__logo">SK</a>
       <ul className="nav__links">
         <li><a href="#about" className="nav__link">About</a></li>
+        <li><a href="#experience" className="nav__link">Experience</a></li>
         <li><a href="#skills" className="nav__link">Skills</a></li>
-        <li><a href="#projects" className="nav__link">Projects</a></li>
+        <li><a href="#education" className="nav__link">Education</a></li>
         <li><a href="#contact" className="nav__link">Contact</a></li>
       </ul>
     </nav>
@@ -21,7 +22,7 @@ function Navigation() {
 
 // Progress Indicator
 function ProgressIndicator({ activeSection }: { activeSection: number }) {
-  const sections = ['hero', 'about', 'skills', 'projects', 'contact']
+  const sections = ['hero', 'about', 'experience', 'skills', 'education', 'contact']
   
   return (
     <div className="progress">
@@ -133,71 +134,137 @@ function SkillsSection() {
   )
 }
 
-// Projects Section
-function ProjectsSection() {
-  const projects = [
+// Experience Section
+function ExperienceSection() {
+  const experiences = [
     {
-      title: 'Project Alpha',
-      description: 'A full-stack web application with real-time features and modern UI. Built with React and Node.js.',
-      tech: ['React', 'Node.js', 'Socket.io', 'PostgreSQL'],
-      github: '#',
-      live: '#'
+      company: 'Oleander Financial Technologies Pvt Ltd',
+      role: 'Software Developer',
+      period: 'June 2024 - Present',
+      location: 'Pune, India',
+      projects: [
+        {
+          name: 'Protradedesk',
+          subtitle: 'Copy Trading Platform',
+          points: [
+            'Architected and developed a Copy Trading Platform enabling traders to execute trades across multiple brokerage accounts simultaneously using Python, Django, and WebSocket technologies',
+            'Integrated third-party APIs from India\'s leading brokers (Zerodha, Angel One, Groww, Upstox, and many more) for real-time order execution, portfolio synchronization, and live market data streaming',
+            'Built a unified portfolio dashboard allowing users to monitor positions, holdings, and P&L across multiple trading accounts in a single interface',
+            'Implemented real-time order updates using WebSockets and asynchronous task processing with Huey queue for high-performance trade execution'
+          ],
+          tech: ['Python', 'Django', 'WebSocket', 'PostgreSQL', 'Huey', 'HTMX', 'REST APIs', 'AWS']
+        },
+        {
+          name: 'Olgo',
+          subtitle: 'Financial Goal Tracking Platform',
+          points: [
+            'Developed a financial goal tracking platform analyzing user spending patterns and investment history to create personalized financial roadmaps using Python, Django, and NATS messaging',
+            'Integrated Finvuu Account Aggregator API to securely fetch comprehensive financial data from user\'s banks and investment platforms, enabling holistic financial planning',
+            'Implemented 2Factor SMS service for OTP authentication and currently integrating Smallcase APIs to enable direct stock investments aligned with user goals',
+            'Collaborated with Flutter mobile development team to build RESTful APIs powering Android and iOS applications'
+          ],
+          tech: ['Python', 'Django', 'NATS', 'PostgreSQL', 'REST APIs', 'Flutter', 'Account Aggregator', 'AWS']
+        }
+      ]
     },
     {
-      title: 'Project Beta',
-      description: 'Mobile-first e-commerce platform with seamless checkout flow and inventory management.',
-      tech: ['Next.js', 'Stripe', 'MongoDB', 'Tailwind'],
-      github: '#',
-      live: '#'
-    },
-    {
-      title: 'Project Gamma',
-      description: 'AI-powered dashboard for data visualization and predictive analytics.',
-      tech: ['Python', 'TensorFlow', 'D3.js', 'FastAPI'],
-      github: '#',
-      live: '#'
+      company: 'Coditas LLP',
+      role: 'Associate Software Engineer',
+      period: 'July 2022 - December 2023',
+      location: 'Pune, India',
+      projects: [
+        {
+          name: 'Candidate Connect',
+          subtitle: 'Recruitment Automation Platform',
+          points: [
+            'Developed a recruitment automation platform connecting candidates with HR teams via WhatsApp Business API, reducing hiring turnaround time by 40%',
+            'Designed and implemented microservices architecture with RESTful APIs, WebSocket integration, and seamless third-party integrations with Zoho Recruit and Zoho People',
+            'Collaborated with cross-functional teams in Agile environment to deliver production-ready features'
+          ],
+          tech: ['Node.js', 'TypeScript', 'Express.js', 'PostgreSQL', 'WebSocket', 'Microservices', 'REST APIs']
+        },
+        {
+          name: 'Mitsu',
+          subtitle: 'Mental Health Care Platform',
+          points: [
+            'Built a mental health care platform featuring secure authentication systems, payment gateway integration (Razorpay), and automated email notification services',
+            'Engineered backend services using Node.js, Express.js, TypeScript, and PostgreSQL with focus on scalability, security, and performance optimization',
+            'Maintained 80%+ code coverage through comprehensive unit and integration testing'
+          ],
+          tech: ['Node.js', 'TypeScript', 'Express.js', 'PostgreSQL', 'Razorpay', 'AWS', 'Jest']
+        }
+      ]
     }
   ]
   
   return (
-    <section id="projects" className="section projects">
-      <span className="section__label">// My Work</span>
-      <h2 className="section__title">Featured Projects</h2>
-      <div className="projects__grid">
-        {projects.map((project) => (
-          <article key={project.title} className="project-card">
-            <div className="project-card__image" />
-            <div className="project-card__content">
-              <h3 className="project-card__title">{project.title}</h3>
-              <p className="project-card__description">{project.description}</p>
-              <div className="project-card__tech">
-                {project.tech.map((tech) => (
-                  <span key={tech} className="project-card__tech-item">{tech}</span>
-                ))}
+    <section id="experience" className="section experience">
+      <span className="section__label">// Career Journey</span>
+      <h2 className="section__title">Professional Experience</h2>
+      <div className="experience__timeline">
+        {experiences.map((exp) => (
+          <article key={exp.company} className="experience__card">
+            <div className="experience__header">
+              <div>
+                <h3 className="experience__role">{exp.role}</h3>
+                <p className="experience__company">{exp.company}</p>
               </div>
-              <div className="project-card__links">
-                <a 
-                  href={project.github} 
-                  className="project-card__link"
-                  aria-label={`View ${project.title} on GitHub`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub ↗
-                </a>
-                <a 
-                  href={project.live} 
-                  className="project-card__link"
-                  aria-label={`View ${project.title} live demo`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo ↗
-                </a>
+              <div className="experience__meta">
+                <span className="experience__period">{exp.period}</span>
+                <span className="experience__location">{exp.location}</span>
               </div>
+            </div>
+            
+            <div className="experience__projects">
+              {exp.projects.map((project) => (
+                <div key={project.name} className="experience__project">
+                  <h4 className="experience__project-name">
+                    {project.name}
+                    <span className="experience__project-subtitle">{project.subtitle}</span>
+                  </h4>
+                  <ul className="experience__description">
+                    {project.points.map((point, index) => (
+                      <li key={index}>{point}</li>
+                    ))}
+                  </ul>
+                  <div className="experience__tech">
+                    {project.tech.map((tech) => (
+                      <span key={tech} className="experience__tech-item">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </article>
         ))}
+      </div>
+    </section>
+  )
+}
+
+// Education Section
+function EducationSection() {
+  return (
+    <section id="education" className="section education">
+      <span className="section__label">// Academic Background</span>
+      <h2 className="section__title">Education</h2>
+      <div className="education__content">
+        <article className="education__card">
+          <div className="education__icon">🎓</div>
+          <div className="education__details">
+            <h3 className="education__degree">Bachelor of Engineering (B.E.)</h3>
+            <p className="education__field">Electronics and Telecommunications</p>
+            <p className="education__institution">AISSMS Institute of Information Technology (IOIT)</p>
+            <p className="education__university">Savitribai Phule Pune University</p>
+            <div className="education__meta">
+              <span className="education__period">2017 - 2022</span>
+              <span className="education__location">Pune, Maharashtra</span>
+            </div>
+            <div className="education__score">
+              <span className="education__cgpa">CGPA: 8.01 / 10</span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
   )
@@ -237,8 +304,8 @@ Best regards,
       {/* Resume Download Button */}
       <div style={{ marginTop: '2rem', marginBottom: '2rem' }}>
         <a 
-          href="/resume.pdf" 
-          download="Sarang_Kulkarni_Resume.pdf"
+          href="/Sarang Kulkarni.pdf" 
+          download="Sarang Kulkarni.pdf"
           className="btn btn--primary"
           style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
         >
@@ -305,7 +372,7 @@ function App() {
       setScrollProgress(progress)
       
       // Determine active section
-      const sections = ['hero', 'about', 'skills', 'projects', 'contact']
+      const sections = ['hero', 'about', 'skills', 'contact']
       const sectionElements = sections.map(id => document.getElementById(id))
       
       for (let i = sectionElements.length - 1; i >= 0; i--) {
@@ -335,8 +402,9 @@ function App() {
       <main className="content-overlay">
         <HeroSection />
         <AboutSection />
+        <ExperienceSection />
         <SkillsSection />
-        <ProjectsSection />
+        <EducationSection />
         <ContactSection />
       </main>
     </>
