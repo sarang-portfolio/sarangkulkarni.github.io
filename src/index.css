@@ -1043,6 +1043,85 @@ body {
     min-width: auto;
     padding: var(--space-md);
   }
+  
+  /* Experience Section - Tiny Phones */
+  .experience__timeline {
+    gap: var(--space-md);
+  }
+  
+  .experience__card {
+    padding: var(--space-md);
+  }
+  
+  .experience__header {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  
+  .experience__role {
+    font-size: 1rem;
+  }
+  
+  .experience__company {
+    font-size: 0.9rem;
+  }
+  
+  .experience__meta {
+    flex-direction: column;
+    gap: var(--space-xs);
+    align-items: flex-start;
+  }
+  
+  .experience__period,
+  .experience__location {
+    font-size: 0.75rem;
+  }
+  
+  .experience__description li {
+    font-size: 0.85rem;
+    padding-left: 1rem;
+  }
+  
+  .experience__tech {
+    gap: var(--space-xs);
+  }
+  
+  .experience__tech-item {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .experience__project-name {
+    font-size: 0.9rem;
+  }
+  
+  .experience__project-subtitle {
+    font-size: 0.75rem;
+  }
+  
+  /* Education Section - Tiny Phones */
+  .education__card {
+    padding: var(--space-md);
+  }
+  
+  .education__degree {
+    font-size: 1rem;
+  }
+  
+  .education__institution {
+    font-size: 0.85rem;
+  }
+  
+  .education__meta {
+    flex-direction: column;
+    gap: var(--space-xs);
+    align-items: flex-start;
+  }
+  
+  .education__period,
+  .education__cgpa {
+    font-size: 0.8rem;
+  }
 }
 
 /* Small Phones (375px - 479px) */
@@ -1129,6 +1208,61 @@ body {
     width: 100%;
     padding: var(--space-md);
   }
+  
+  /* Experience Section - Small Phones */
+  .experience__timeline {
+    gap: var(--space-lg);
+  }
+  
+  .experience__card {
+    padding: var(--space-md);
+  }
+  
+  .experience__header {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  
+  .experience__role {
+    font-size: 1.1rem;
+  }
+  
+  .experience__company {
+    font-size: 0.95rem;
+  }
+  
+  .experience__meta {
+    flex-direction: column;
+    gap: var(--space-xs);
+    align-items: flex-start;
+  }
+  
+  .experience__description li {
+    font-size: 0.9rem;
+  }
+  
+  .experience__tech-item {
+    font-size: 0.75rem;
+  }
+  
+  .experience__project-name {
+    font-size: 0.95rem;
+  }
+  
+  /* Education Section - Small Phones */
+  .education__card {
+    padding: var(--space-lg);
+  }
+  
+  .education__degree {
+    font-size: 1.1rem;
+  }
+  
+  .education__meta {
+    flex-direction: column;
+    gap: var(--space-xs);
+    align-items: flex-start;
+  }
 }
 
 /* Large Phones (480px - 639px) */
@@ -1188,6 +1322,39 @@ body {
     width: auto;
     min-width: 120px;
   }
+  
+  /* Experience Section - Large Phones */
+  .experience__card {
+    padding: var(--space-lg);
+  }
+  
+  .experience__header {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  
+  .experience__meta {
+    flex-direction: row;
+    gap: var(--space-md);
+  }
+  
+  .experience__role {
+    font-size: 1.2rem;
+  }
+  
+  .experience__description li {
+    font-size: 0.95rem;
+  }
+  
+  /* Education Section - Large Phones */
+  .education__card {
+    padding: var(--space-lg);
+  }
+  
+  .education__meta {
+    flex-direction: row;
+    gap: var(--space-lg);
+  }
 }
 
 /* Small Tablets (640px - 767px) */
@@ -1218,6 +1385,20 @@ body {
   
   .project-card__image {
     height: 160px;
+  }
+  
+  /* Experience Section - Small Tablets */
+  .experience__card {
+    padding: var(--space-xl);
+  }
+  
+  .experience__role {
+    font-size: 1.25rem;
+  }
+  
+  /* Education Section - Small Tablets */
+  .education__card {
+    padding: var(--space-xl);
   }
 }
 
