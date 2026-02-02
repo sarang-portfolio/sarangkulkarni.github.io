@@ -372,7 +372,7 @@ function App() {
       setScrollProgress(progress)
       
       // Determine active section
-      const sections = ['hero', 'about', 'skills', 'contact']
+      const sections = ['hero', 'about', 'experience', 'skills', 'education', 'contact']
       const sectionElements = sections.map(id => document.getElementById(id))
       
       for (let i = sectionElements.length - 1; i >= 0; i--) {
