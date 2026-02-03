@@ -140,7 +140,7 @@ function ExperienceSection() {
     {
       company: 'Oleander Financial Technologies Pvt Ltd',
       role: 'Software Developer',
-      period: 'June 2024 - Present',
+      period: 'June 2025 - Present',
       location: 'Pune, India',
       projects: [
         {
