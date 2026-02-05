@@ -46,8 +46,8 @@ function HeroSection() {
       <h1 className="hero__name">Sarang Kulkarni</h1>
       <p className="hero__title">Software Developer</p>
       <div className="hero__cta">
-        <a href="#projects" className="btn btn--primary">
-          View My Work
+        <a href="#experience" className="btn btn--primary">
+          View My Experience
           <span>→</span>
         </a>
         <a href="#contact" className="btn btn--secondary">
